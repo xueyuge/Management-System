@@ -4,7 +4,7 @@ DATABASE INFO RECORD
 Source Server         : Alan's-MBP
 Source Server Version : 50617
 Source Host           : localhost:3306
-Source Database       : demo
+Source Database       : project
 
 Target Server Type    : MYSQL
 Target Server Version : 50617
@@ -14,6 +14,8 @@ Date: 2017-12-01 01:49:16
 */
 
 SET FOREIGN_KEY_CHECKS=0;
+
+USE project;
 
 -- ----------------------------
 -- Table structure for address
