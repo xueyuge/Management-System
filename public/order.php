@@ -2,12 +2,12 @@
 	require "../config.php";
 	require "../common.php";
 	$connection = new PDO($dsn, $username, $password, $options);
-	try 
+	try
 	{
-		$sql="select a.product_id,a.approved_status,a.order_date,a.client_id,a.person_in_charge,(case a.approved_status when 0  then 'Shipped”'  else 'Delivered' end) as approved,b.plants_name as product_name,c.customer_name as clientname,d.address as shipment from orders a LEFT JOIN plants b on a.product_id=b.product_id  left join customers c  on a.client_id=c.client_id  left join shipments d on  a.shipment_id=d.shipment_id "; 
-		$res=$connection->query($sql);  
+		$sql="select a.product_id,a.approved_status,a.order_date,a.client_id,a.person_in_charge,(case a.approved_status when 0  then 'Shipped”'  else 'Delivered' end) as approved,b.plants_name as product_name,c.customer_name as clientname,d.address as shipment from orders a LEFT JOIN plants b on a.product_id=b.product_id  left join customers c  on a.client_id=c.client_id  left join shipments d on  a.shipment_id=d.shipment_id ";
+		$res=$connection->query($sql);
 	}
-	catch(PDOException $error) 
+	catch(PDOException $error)
 	{
 		echo $sql . "<br>" . $error->getMessage();
 	}
@@ -16,7 +16,7 @@
 		if($connection->exec($sql)>0){
 			echo '<script>alert("check out success!");location.href="order.php"</script>';
 		}
-		
+
 	}
  require "templates/header.php"; ?>
 
@@ -30,7 +30,7 @@
                   Menu
             </div>
             <ul class="menuson">
-                <li><cite></cite><a href="index.php" target="rightFrame">home</a><i></i></li>
+                <li><cite></cite><a href="index.php" target="rightFrame">Add Order</a><i></i></li>
                 <li ><cite></cite><a href="addresslist.php" target="rightFrame">address</a><i></i></li>
                 <li><cite></cite><a href="cardslist.php" target="rightFrame">creditcards</a><i></i></li>
                 <li><cite></cite><a href="customerlist.php" target="rightFrame">customers</a><i></i></li>
@@ -69,7 +69,7 @@
 					<?php }?>
 					</td>
 				</tr>
-		  <?php } ?>  
+		  <?php } ?>
         </tbody>
     </table>
 </div>

@@ -1,17 +1,17 @@
 <?php
 	require "../config.php";
 	require "../common.php";
-	try 
+	try
 	{
 		$connection = new PDO($dsn, $username, $password, $options);
-		$sql="select * from shipments "; 
-		$res=$connection->query($sql);  
+		$sql="select * from shipments ";
+		$res=$connection->query($sql);
 	}
-	catch(PDOException $error) 
+	catch(PDOException $error)
 	{
 		echo $sql . "<br>" . $error->getMessage();
 	}
-	
+
  require "templates/header.php"; ?>
 
  <link href="css/bootstrap.css" rel="stylesheet" />
@@ -24,7 +24,7 @@
                   Menu
             </div>
             <ul class="menuson">
-             	<li><cite></cite><a href="index.php" target="rightFrame">home</a><i></i></li>
+             	<li><cite></cite><a href="index.php" target="rightFrame">Add Order</a><i></i></li>
                 <li ><cite></cite><a href="addresslist.php" target="rightFrame">address</a><i></i></li>
                 <li><cite></cite><a href="cardslist.php" target="rightFrame">creditcards</a><i></i></li>
                 <li><cite></cite><a href="customerlist.php" target="rightFrame">customers</a><i></i></li>
@@ -60,7 +60,7 @@
 					<td><?php if($row['shipping_status']==0){ echo 'put up the shelves ';}else{echo ' taken off the shelves'; } ?> </td>
 					<td><a class="tablelink" href="shipments.php?type=edit&id=<?php echo $row['shipment_id']; ?>">edit</a> <a class="tablelink" href="shipments.php?type=del&id=<?php echo $row['shipment_id']; ?>">del</a>  </td>
 				</tr>
-		  <?php } ?>  
+		  <?php } ?>
         </tbody>
     </table>
 </div>
