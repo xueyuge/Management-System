@@ -1,13 +1,6 @@
 @charset "UTF-8";
-/**
- * 
- * @authors Bmeria (you@example.org)
- * @date    2017-10-09 13:37:22
- * @version $Id$
- */
 
-/*通用*/
-body{font-family: 微软雅黑;padding:0;margin:0; }
+body{font-family: Arial;padding:0;margin:0; }
 .container{width: 1200px;margin:0 auto;}
 .pull-left{float: left !important;}
 .pull-right{float: right !important;}
@@ -20,7 +13,6 @@ a{font-style: none;text-decoration:none;}
 ol{list-style: none;margin-left:0;}
 ul{list-style: none;margin-left:0;}
 
-/*头部*/
 .head-tool-box{height: 40px;line-height: 40px;border-bottom: #ddd 1px solid;}
 .head-tool-box span.pull-right{margin-left: 10px;}
 .head-tool-box span{color: #777;font-size: 14px;}
@@ -29,7 +21,6 @@ ul{list-style: none;margin-left:0;}
 .head-main-box{height: 90px;}
 .head-main-box img{padding-top: 20px;}
 
-/*主体*/
 .contianer-main{overflow:hidden;margin-bottom:55px; }
 .contianer-main .bread ol{padding-left: 30px; display: block;overflow: hidden;
 	background: url(../img/bread-min.png) no-repeat left center;}
@@ -70,5 +61,4 @@ ul{list-style: none;margin-left:0;}
 .main-r-box .main-r-body .main-r-list ul li span.icon{width: 25px;float: left;}
 .main-r-box .main-r-body .main-r-list img{width: 20px;position: relative;top: 4px;margin-right: 10px;border:0;}
 
-/*底部*/
 .footer{background: #777;height: 40px;line-height: 40px;text-align: center;color: #fff;text-align: center;font-size: 14px;}
