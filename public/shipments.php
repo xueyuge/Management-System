@@ -1,10 +1,5 @@
 <?php
 
-/**
- * Use an HTML form to create a new entry in the
- * users table.
- *
- */
 
 require "../config.php";
 require "../common.php";
