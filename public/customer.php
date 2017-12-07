@@ -1,16 +1,10 @@
 <?php
 
-/**
- * Use an HTML form to create a new entry in the
- * users table.
- *
- */
-
 require "../config.php";
 require "../common.php";
 if (isset($_POST['submit']))
 {
-	try 
+	try
 	{
 		$connection = new PDO($dsn, $username, $password, $options);
 		$plants = array(
@@ -44,15 +38,15 @@ if (isset($_POST['submit']))
 			}
 		}
 	}
-	catch(PDOException $error) 
+	catch(PDOException $error)
 	{
 		echo $sql . "<br>" . $error->getMessage();
 	}
-	
+
 }
 ?>
 <?php require "templates/header.php"; ?>
-<?php 
+<?php
  if(!empty($_GET['type'])){
     $types=$_GET['type'];
 	$id=$_GET['id'];
@@ -60,13 +54,13 @@ if (isset($_POST['submit']))
 		if($types=='del')
 		{
 			$sql='delete from customers where client_id='.$id;
-			$result=$connection->exec($sql); 
+			$result=$connection->exec($sql);
 			if($result>0){
 				echo '<script>alert("del success!");location.href="customerlist.php"</script>';
 			}
 		}else if($types=='edit'){
 			$sqlt='select * from customers where client_id='.$id;
-			$res=$connection->query($sqlt); 
+			$res=$connection->query($sqlt);
 			  if(count($res)==1){
 			  	foreach($res as $row){
 			  	?>
@@ -81,7 +75,7 @@ if (isset($_POST['submit']))
 					<label for="email">shipping_address</label>
 					<input type="text" name="shipping_address" id="shipping_address" value="<?php echo $row['shipping_address']; ?>">
 					<input type="submit" name="submit" value="Submit">
-				   </form> 
+				   </form>
 
 			<?php }}}else {?>
 
@@ -96,7 +90,7 @@ if (isset($_POST['submit']))
 					<label for="email">shipping_address</label>
 					<input type="text" name="shipping_address" id="shipping_address">
 					<input type="submit" name="submit" value="Submit">
-				   </form> 
+				   </form>
 
 <?php }}else{?>
 				    <form method="post">
@@ -110,7 +104,7 @@ if (isset($_POST['submit']))
 					<label for="email">shipping_address</label>
 					<input type="text" name="shipping_address" id="shipping_address">
 					<input type="submit" name="submit" value="Submit">
-				   </form> 
+				   </form>
 <?php }?>
-     
+
 <?php require "templates/footer.php"; ?>
