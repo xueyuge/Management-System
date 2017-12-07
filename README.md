@@ -1,4 +1,4 @@
-# A Plant Store Management System -- Simple Database App
+# A Plant Store Management System -- Simple Database App for Northeastern CS3200
 
 ```
 BEFORE SETTING UP, MAKE SURE YOU HAVE CONFIGURED THE SERVER CORRECTLY:
