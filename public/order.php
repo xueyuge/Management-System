@@ -65,7 +65,7 @@
 					<td><?php echo $row['shipment'].'<br/>'; ?> </td>
 					<td>
 					<?php if($row['approved_status']==0) {?>
-					<a class="tablelink" href="order.php?id=<?php echo $row['product_id']; ?>&cid=<?php echo $row['client_id']; ?>&charge=<?php echo $row['person_in_charge']; ?>">Shipped</a>
+					<a class="tablelink" href="order.php?id=<?php echo $row['product_id']; ?>&cid=<?php echo $row['client_id']; ?>&charge=<?php echo $row['person_in_charge']; ?>">Mark as Delivered</a>
 					<?php }?>
 					</td>
 				</tr>

@@ -61,7 +61,7 @@
         <dd>
             <div class="title">
                 <span><img src="images/leftico01.png" /></span>
-                  Menu
+                  Management System
             </div>
             <ul class="menuson">
                 <li class="active"><cite></cite><a href="index.php" target="rightFrame">Add Order</a><i></i></li>
