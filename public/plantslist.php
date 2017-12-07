@@ -22,7 +22,7 @@
         <dd>
             <div class="title">
                 <span><img src="images/leftico01.png" /></span>
-                  Menu
+                  Management System
             </div>
             <ul class="menuson">
                 <li><cite></cite><a href="index.php" target="rightFrame">Add Order</a><i></i></li>
