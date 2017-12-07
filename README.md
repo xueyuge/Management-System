@@ -1,7 +1,3 @@
-# Connecting to MySQL in PHP using PDO
+# A Plant Store Management System
 
-Create a Simple Database App: Connecting to MySQL with PHP
-
-- Install database and create table
-- Submit users
-- Query and filter users
+A Simple Database App
