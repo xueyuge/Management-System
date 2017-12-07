@@ -1,17 +1,17 @@
 <?php
 	require "../config.php";
 	require "../common.php";
-	try 
+	try
 	{
 		$connection = new PDO($dsn, $username, $password, $options);
-		$sql="select * from address "; 
-		$res=$connection->query($sql);  
+		$sql="select * from address ";
+		$res=$connection->query($sql);
 	}
-	catch(PDOException $error) 
+	catch(PDOException $error)
 	{
 		echo $sql . "<br>" . $error->getMessage();
 	}
-	
+
 require "templates/header.php"; ?>
 
  <link href="css/bootstrap.css" rel="stylesheet" />
@@ -24,7 +24,7 @@ require "templates/header.php"; ?>
                   Menu
             </div>
             <ul class="menuson">
-                <li><cite></cite><a href="index.php" target="rightFrame">home</a><i></i></li>
+                <li><cite></cite><a href="index.php" target="rightFrame">Add Order</a><i></i></li>
                 <li class="active"><cite></cite><a href="addresslist.php" target="rightFrame">address</a><i></i></li>
                 <li><cite></cite><a href="cardslist.php" target="rightFrame">creditcards</a><i></i></li>
                 <li><cite></cite><a href="customerlist.php" target="rightFrame">customers</a><i></i></li>
@@ -65,7 +65,7 @@ require "templates/header.php"; ?>
 					<td><?php echo $row['zip_code'].'<br/>'; ?> </td>
 					<td><a class="tablelink" href="address.php?type=edit&id=<?php echo $row['address_id']; ?>">edit</a> <a class="tablelink" href="address.php?type=del&id=<?php echo $row['address_id']; ?>">del</a>  </td>
 				</tr>
-		  <?php } ?>  
+		  <?php } ?>
         </tbody>
     </table>
 </div>

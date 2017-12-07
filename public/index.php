@@ -18,7 +18,7 @@
 				$statement=0;
 				echo '<script>alert("person_in_charge  is  empty!");</script>';
 			}else{
-				 
+
 					$sql = sprintf(
 							"INSERT INTO %s (%s) values (%s)",
 							"orders",
@@ -35,23 +35,23 @@
 		{
 			echo $sql . "<br>" . $error->getMessage();
 		}
-	
+
 	}
-	try 
+	try
 	{
 		$connection = new PDO($dsn, $username, $password, $options);
-		$sql="select * from plants  "; 
-		$plants=$connection->query($sql);  
+		$sql="select * from plants  ";
+		$plants=$connection->query($sql);
 		$sql="select * from customers  ";
 		$customers=$connection->query($sql);
 		$sql="select * from shipments  ";
 		$shipments=$connection->query($sql);
 	}
-	catch(PDOException $error) 
+	catch(PDOException $error)
 	{
 		echo $sql . "<br>" . $error->getMessage();
 	}
-	
+
  require "templates/header.php"; ?>
 
  <link href="css/bootstrap.css" rel="stylesheet" />
@@ -64,7 +64,7 @@
                   Menu
             </div>
             <ul class="menuson">
-                <li class="active"><cite></cite><a href="index.php" target="rightFrame">home</a><i></i></li>
+                <li class="active"><cite></cite><a href="index.php" target="rightFrame">Add Order</a><i></i></li>
                 <li ><cite></cite><a href="addresslist.php" target="rightFrame">address</a><i></i></li>
                 <li><cite></cite><a href="cardslist.php" target="rightFrame">creditcards</a><i></i></li>
                 <li><cite></cite><a href="customerlist.php" target="rightFrame">customers</a><i></i></li>
@@ -111,5 +111,5 @@
 					<input type="submit" class="btn" name="submit" value="Submit">
 			</li>
 		 </ul>
-	   </form> 
+	   </form>
 </div>
